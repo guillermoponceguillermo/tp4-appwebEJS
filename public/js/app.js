@@ -1,0 +1,1 @@
+console.log('Aplicación de Mascotas cargada correctamente desde app.js');

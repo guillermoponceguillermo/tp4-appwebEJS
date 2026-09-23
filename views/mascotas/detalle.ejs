@@ -1,0 +1,18 @@
+<div class="detalle-container">
+  <h2>Detalle de <%= mascota.nombre %></h2>
+
+  <div class="detalle-card">
+    <img src="<%= mascota.imagen %>" alt="Fotografía o representación de <%= mascota.nombre %>" class="detalle-img">
+    
+    <div class="detalle-info">
+      <p><strong>ID:</strong> <%= mascota.id %></p>
+      <p><strong>Nombre:</strong> <%= mascota.nombre %></p>
+      <p><strong>Especie:</strong> <%= mascota.especie %></p>
+      <p><strong>Edad:</strong> <%= mascota.edad %> <%= mascota.edad === 1 ? 'año' : 'años' %></p>
+      <p><strong>Estado:</strong> <span class="badge"><%= mascota.estado %></span></p>
+      <p><strong>Descripción:</strong> <%= mascota.descripcion %></p>
+    </div>
+  </div>
+
+  <a href="/mascotas" class="btn-secundario">← Volver al catálogo</a>
+</div>

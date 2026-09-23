@@ -1,0 +1,42 @@
+<h2>Agregar Nueva Mascota</h2>
+
+<% if (error) { %>
+  <div role="alert" class="alerta-error">
+    <%= error %>
+  </div>
+<% } %>
+
+<form action="/mascotas" method="post" class="formulario">
+  <div class="campo">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" value="<%= valores.nombre || '' %>" required>
+  </div>
+
+  <div class="campo">
+    <label for="especie">Especie:</label>
+    <input type="text" id="especie" name="especie" value="<%= valores.especie || '' %>" placeholder="Ej. Perro, Gato" required>
+  </div>
+
+  <div class="campo">
+    <label for="edad">Edad (años):</label>
+    <input type="number" id="edad" name="edad" min="0" value="<%= valores.edad !== undefined ? valores.edad : '' %>" required>
+  </div>
+
+  <div class="campo">
+    <label for="estado">Estado:</label>
+    <select id="estado" name="estado" required>
+      <option value="">-- Seleccionar estado --</option>
+      <option value="En adopción" <%= valores.estado === 'En adopción' ? 'selected' : '' %>>En adopción</option>
+      <option value="Reservada" <%= valores.estado === 'Reservada' ? 'selected' : '' %>>Reservada</option>
+      <option value="Adoptada" <%= valores.estado === 'Adoptada' ? 'selected' : '' %>>Adoptada</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" rows="4" required><%= valores.descripcion || '' %></textarea>
+  </div>
+
+  <button type="submit" class="btn">Guardar Mascota</button>
+  <a href="/mascotas" class="btn-cancelar">Cancelar</a>
+</form>

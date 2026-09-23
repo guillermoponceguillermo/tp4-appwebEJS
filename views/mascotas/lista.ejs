@@ -1,0 +1,27 @@
+<h2>Catálogo de Mascotas en Adopción</h2>
+
+<div class="acciones">
+  <a href="/mascotas/nueva" class="btn"> + Registrar nueva mascota</a>
+</div>
+
+<% if (mascotas && mascotas.length > 0) { %>
+  <div class="grilla">
+    <% mascotas.forEach(mascota => { %>
+      <article class="tarjeta">
+        <img src="<%= mascota.imagen %>" alt="Ilustración de <%= mascota.nombre %>">
+        <div class="tarjeta-body">
+          <h3><%= mascota.nombre %></h3>
+          <p><strong>Especie:</strong> <%= mascota.especie %></p>
+          <p><strong>Edad:</strong> <%= mascota.edad %> <%= mascota.edad === 1 ? 'año' : 'años' %></p>
+          <p><strong>Estado:</strong> <span class="badge"><%= mascota.estado %></span></p>
+          <a href="/mascotas/<%= mascota.id %>" class="btn-secundario">Ver detalle</a>
+        </div>
+      </article>
+    <% }) %>
+  </div>
+<% } else { %>
+  <div class="mensaje-vacio">
+    <p>No hay mascotas registradas temporalmente en el catálogo.</p>
+    <a href="/mascotas/nueva" class="btn">Registrar la primera</a>
+  </div>
+<% } %>
