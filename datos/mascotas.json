@@ -22,7 +22,7 @@
     "nombre": "Rex",
     "especie": "Perro",
     "edad": 5,
-    "descripcion": "Guardian fiel, educado y obediente.",
+    "descripcion": "Guardián fiel, educado y obediente.",
     "estado": "Adoptada",
     "imagen": "/img/mascota.svg"
   },

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title">
+  <title id="title">Ilustración de una mascota</title>
+  <rect width="320" height="220" rx="16" fill="#e6f2e6"/>
+  <path d="M91 87 72 42c-2-6 5-11 10-7l46 32m91 20 22-45c3-6-4-12-10-8l-48 33" fill="#d58a5c" stroke="#603f30" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M95 108c0-38 29-65 66-65s66 27 66 65v37c0 29-27 48-66 48s-66-19-66-48z" fill="#f3bc86" stroke="#603f30" stroke-width="7"/>
+  <ellipse cx="137" cy="117" rx="7" ry="10" fill="#342b27"/>
+  <ellipse cx="185" cy="117" rx="7" ry="10" fill="#342b27"/>
+  <path d="M151 140q9-8 18 0-9 11-18 0zm9 2v10m0 0q-10 9-18 0m18 0q10 9 18 0" fill="none" stroke="#603f30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="90" cy="181" r="8" fill="#87a886"/>
+  <circle cx="232" cy="177" r="11" fill="#87a886"/>
+</svg>

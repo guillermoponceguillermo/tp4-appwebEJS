@@ -5,7 +5,7 @@ async function leerArchivoJson(ruta) {
     const contenido = await fs.readFile(ruta, 'utf-8');
     return JSON.parse(contenido);
   } catch (error) {
-    return [];
+    throw new Error(`No se pudo leer el archivo JSON ${ruta}: ${error.message}`);
   }
 }
 

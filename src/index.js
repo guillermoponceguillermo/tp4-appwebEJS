@@ -70,16 +70,19 @@ async function main() {
     // POST /mascotas (Procesamiento de formulario)
     app.post('/mascotas', (req, res) => {
       const { nombre, especie, edad, estado, descripcion } = req.body;
+      const nombreLimpio = typeof nombre === 'string' ? nombre.trim() : '';
+      const especieLimpia = typeof especie === 'string' ? especie.trim() : '';
+      const descripcionLimpia = typeof descripcion === 'string' ? descripcion.trim() : '';
       const edadNum = Number(edad);
 
       // Validaciones
       const estadosPermitidos = ['En adopción', 'Reservada', 'Adoptada'];
       let error = null;
 
-      if (!nombre || !especie || !edad || !estado || !descripcion) {
+      if (!nombreLimpio || !especieLimpia || !String(edad ?? '').trim() || !estado || !descripcionLimpia) {
         error = 'Todos los campos son obligatorios.';
-      } else if (isNaN(edadNum) || edadNum < 0) {
-        error = 'La edad debe ser un número igual o mayor a 0.';
+      } else if (!Number.isInteger(edadNum) || edadNum < 0) {
+        error = 'La edad debe ser un número entero igual o mayor a 0.';
       } else if (!estadosPermitidos.includes(estado)) {
         error = 'El estado seleccionado no es válido.';
       }
@@ -98,11 +101,11 @@ async function main() {
 
       const nuevaMascota = {
         id: nuevoId,
-        nombre: nombre.trim(),
-        especie: especie.trim(),
+        nombre: nombreLimpio,
+        especie: especieLimpia,
         edad: edadNum,
         estado,
-        descripcion: descripcion.trim(),
+        descripcion: descripcionLimpia,
         imagen: '/img/mascota.svg'
       };
 
