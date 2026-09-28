@@ -1,0 +1,22 @@
+<section class="encabezado-pagina">
+  <div>
+    <p class="ceja">Ficha de adopción · #<%= mascota.id %></p>
+    <h1><%= mascota.nombre %></h1>
+  </div>
+  <a class="boton boton-secundario" href="/mascotas">Volver al catálogo</a>
+</section>
+
+<article class="detalle">
+  <img class="detalle-imagen" src="<%= mascota.imagen %>" alt="Ilustración de <%= mascota.nombre %>">
+  <div class="detalle-datos">
+    <p class="ceja"><%= mascota.estado %></p>
+    <h2>Conocé a <%= mascota.nombre %></h2>
+    <dl>
+      <div><dt>Identificador</dt><dd><%= mascota.id %></dd></div>
+      <div><dt>Especie</dt><dd><%= mascota.especie %></dd></div>
+      <div><dt>Edad</dt><dd><%= mascota.edad %> <%= mascota.edad === 1 ? 'año' : 'años' %></dd></div>
+      <div><dt>Estado</dt><dd><%= mascota.estado %></dd></div>
+      <div><dt>Descripción</dt><dd><%= mascota.descripcion %></dd></div>
+    </dl>
+  </div>
+</article>

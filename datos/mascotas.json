@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mora",
+    "especie": "Perro",
+    "edad": 3,
+    "descripcion": "Sociable, curiosa y compañera para paseos largos.",
+    "estado": "En adopción",
+    "imagen": "/img/mascota.svg"
+  },
+  {
+    "id": 2,
+    "nombre": "Nube",
+    "especie": "Gato",
+    "edad": 2,
+    "descripcion": "Tranquila y cariñosa; disfruta de los lugares soleados.",
+    "estado": "Reservada",
+    "imagen": "/img/mascota.svg"
+  },
+  {
+    "id": 3,
+    "nombre": "Toto",
+    "especie": "Perro",
+    "edad": 5,
+    "descripcion": "Amigable, paciente y acostumbrado a convivir en familia.",
+    "estado": "Adoptada",
+    "imagen": "/img/mascota.svg"
+  },
+  {
+    "id": 4,
+    "nombre": "Pipa",
+    "especie": "Conejo",
+    "edad": 1,
+    "descripcion": "Pequeña y curiosa, necesita un espacio tranquilo.",
+    "estado": "En adopción",
+    "imagen": "/img/mascota.svg"
+  },
+  {
+    "id": 5,
+    "nombre": "Simón",
+    "especie": "Gato",
+    "edad": 0,
+    "descripcion": "Un gatito juguetón que busca un hogar cuidadoso.",
+    "estado": "En adopción",
+    "imagen": "/img/mascota.svg"
+  }
+]

@@ -1,0 +1,1 @@
+console.log('Catálogo Patitas cerca listo.');
